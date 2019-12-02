@@ -1,0 +1,2 @@
+class CarRental < ApplicationRecord
+end

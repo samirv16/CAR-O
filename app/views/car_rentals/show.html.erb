@@ -1,0 +1,10 @@
+<h1><%= @rental.make %>, <%= @rental.model %> - $<%= @rental.rate %>/day</h1><br><br><br>
+<%= image_tag("profile_pic/488.jpg") %><br><br><br>
+
+<h2><%= link_to "Book #{@rental.make}", new_car_rental_path%></h2><br><br>
+
+
+
+
+
+<%= link_to "Back", car_rentals_path%>

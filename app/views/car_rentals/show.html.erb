@@ -2,9 +2,11 @@
 <%= image_tag("profile_pic/488.jpg") %><br><br><br>
 
 <h2><%= link_to "Book #{@rental.make}", new_car_rental_path%></h2><br><br>
-
-
-
-
+    <h2>Reviews</h2>
+    <ul>
+    <%@rental.reviews.each do |review| %>
+    <li><p><%= review.comment %><br> Rating:  <%= review.rating %></p></li>
+    <%end%>
+    </ul>
 
 <%= link_to "Back", car_rentals_path%>

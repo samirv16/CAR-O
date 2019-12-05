@@ -2,7 +2,7 @@
 
 <ul>
     <% @car_rentals.each do |rental| %>
-    <li>Owner: <%= rental.owner.name %></li>
-    <li>Rental: <%= link_to rental.make, car_rental_path(rental) %>, <%= rental.model %> - $<%= rental.rate %>/day</li> 
+    <h3><li>Owner: <%= rental.owner.name %> - <%= rental.owner.location %></li></h3>
+    <h3>Rental: <%= link_to rental.make, car_rental_path(rental) %>, <%= rental.model %> - $<%= rental.rate %>/day</h3>
     <% end %>
 </ul>

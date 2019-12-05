@@ -1,6 +1,6 @@
 class Review < ApplicationRecord
 
     belongs_to :car_rental
-    belongs_to :uses
+    belongs_to :user
 
 end

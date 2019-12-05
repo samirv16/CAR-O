@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
           has_many :car_rentals
           has_many :owners, through: :car_rentals
+          has_many :reviews
 
           validates :first_name, presence: true
           validates :last_name, presence: true

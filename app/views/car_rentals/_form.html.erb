@@ -1,1 +1,6 @@
-<%= form_with %>
+<%= form_with model: car_rental do |f| %>
+
+            <%= f.datetime_select %>
+            <%= f.submit "Book" %>
+
+<% end %>

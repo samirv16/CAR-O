@@ -10,10 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_02_232246) do
+ActiveRecord::Schema.define(version: 2019_12_05_153322) do
 
   create_table "car_rentals", force: :cascade do |t|
-    t.string "review"
     t.string "make"
     t.string "model"
     t.float "rate"

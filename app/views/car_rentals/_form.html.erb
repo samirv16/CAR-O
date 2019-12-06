@@ -1,6 +1,6 @@
 <%= form_with model: car_rental do |f| %>
-
-            <%= f.datetime_select %>
+            <h3>Pick a Rental Date:</h3>
+            <%= f.date_select :rental_date %>
             <%= f.submit "Book" %>
 
 <% end %>

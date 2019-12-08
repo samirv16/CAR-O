@@ -1,9 +1,9 @@
-<h1><%= @user.last_name if @user%>Review</h1>
+<h1><%= @user.first_name + "'s" if @user%> Reviews</h1>
 
 <ul>
 
     <% @reviews.each do |review|%>
         <li><%= review.comment %></li>
-        <% end %>
+    <% end %>
         
 </ul>

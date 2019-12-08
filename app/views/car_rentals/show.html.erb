@@ -8,5 +8,5 @@
     <li><p><%= review.comment %><br> Rating:  <%= review.rating %></p></li>
     <%end%>
     </ul>
-
+<%= link_to "Write Review", new_car_rental_review_path(@rental)%><br><br>
 <%= link_to "Back", car_rentals_path%>

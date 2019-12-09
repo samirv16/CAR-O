@@ -15,6 +15,7 @@ class ReviewsController < ApplicationController
     end
 
     def create
+        
         @review = Review.new(review_params) #current_user.reviews.build
         if @review.save
             redirect_to car_rental_path #review_path(@review)
@@ -26,7 +27,7 @@ class ReviewsController < ApplicationController
     private
 
     def review_params
-        params.require(:review).permit(:comment, :rating)
+        params.require(:review).permit(:comment, :rating, :current_user)
     end
 
     

@@ -11,14 +11,16 @@ class ReviewsController < ApplicationController
 
     
     def new
+        @car_rental = CarRental.find(params[:car_rental_id])
         @review =Review.new
     end
 
     def create
-        
-        @review = Review.new(review_params) #current_user.reviews.build
+        @review = current_user.reviews.build(review_params)
+        @car_rental = CarRental.find(params[:car_rental_id]) #current_user.reviews.build
+        @review.car_rental = @car_rental
         if @review.save
-            redirect_to car_rental_path #review_path(@review)
+            redirect_to car_rental_path(@review.car_rental.id) #review_path(@review)
         else
             render :new
         end
@@ -27,7 +29,7 @@ class ReviewsController < ApplicationController
     private
 
     def review_params
-        params.require(:review).permit(:comment, :rating, :current_user)
+        params.require(:review).permit(:comment, :rating, :user_id)
     end
 
     

@@ -13,4 +13,12 @@ class CarRentalsController < ApplicationController
         # redirect_to :confirmation
     end
 
+    # def create
+    #     @rental = CarRental.create
+    # end
+
+    def best_revs
+        @reviews = Review.best_reviews
+    end
+
 end

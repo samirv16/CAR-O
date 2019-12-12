@@ -7,4 +7,6 @@ class CarRental < ApplicationRecord
     validates :model, presence: true
     validates :rate, presence: true
 
+    scope :best_reviews, -> { where('rating > ?', 3) }
+
 end

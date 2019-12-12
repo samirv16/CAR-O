@@ -1,0 +1,6 @@
+  
+<h1>Best reviews for this rental</h1>
+
+<ol><% @reviews.each do |review| %>
+    <li><%= link_to "#{review.rating}", review_path(review) %></li>
+<% end %></ol>

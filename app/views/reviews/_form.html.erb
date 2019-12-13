@@ -1,3 +1,5 @@
+<%= render partial: 'layouts/errors', locals: {object: @review} %>
+
 <%= form_for([@car_rental, @review]) do |f|%>
    
     <%= f.label :comment %> 

@@ -1,13 +1,12 @@
 class ReviewsController < ApplicationController
 
-    def index
-        if @user = current_user
-            @reviews = @user.reviews 
-            
-        else
-            @reviews = Review.all 
-        end
-    end
+    # def index
+    #     if @user = current_user
+    #         @reviews = @user.reviews 
+    #     else
+    #         @reviews = Review.all 
+    #     end
+    # end
 
     
     def new
@@ -43,9 +42,6 @@ class ReviewsController < ApplicationController
 
     private
 
-    def set_review
-        @review =  Review.find_by(id: params[:id])
-    end
 
     def review_params
         params.require(:review).permit(:comment, :rating, :user_id)

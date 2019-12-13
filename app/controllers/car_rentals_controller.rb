@@ -5,6 +5,7 @@ class CarRentalsController < ApplicationController
     end
 
     def show
+        @user = User.find(params[:id])
         @rental = CarRental.find(params[:id])
     end
 

@@ -26,6 +26,10 @@ class ReviewsController < ApplicationController
         end
     end
 
+    def best_revs
+        @reviews = Review.best_reviews
+    end
+
     private
 
     def review_params

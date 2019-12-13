@@ -12,5 +12,7 @@ Rails.application.routes.draw do
 
   root to: 'application#home'
 
+  get '/car_rentals/:id/best_reviews', to: 'reviews#best_revs'
+
   
 end

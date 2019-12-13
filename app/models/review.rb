@@ -6,6 +6,6 @@ class Review < ApplicationRecord
     validates :comment, presence: true
     validates :rating, presence: true
 
-    scope :best_reviews, -> { where("rating >= ?", 3) }
+    scope :best_reviews, -> { where("rating > ?", 3) }
 
 end

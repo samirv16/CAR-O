@@ -11,7 +11,6 @@ class CarRentalsController < ApplicationController
 
     def new
         @rental = CarRental.new
-        # redirect_to :confirmation
     end
 
     # def create

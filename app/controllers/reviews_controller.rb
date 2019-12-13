@@ -1,5 +1,8 @@
 class ReviewsController < ApplicationController
 
+    # before_action :rental_id, except: [:show]
+
+
     # def index
     #     if @user = current_user
     #         @reviews = @user.reviews 
@@ -30,17 +33,23 @@ class ReviewsController < ApplicationController
     end
 
     def destroy
-        # byebug
         @review.destroy
         @rental = CarRental.find(params[:car_rental_id])
+        byebug
         redirect_to car_rental_path(@rental)
     end
-
+    
     def best_revs
+        # byebug
         @reviews = Review.best_reviews
+
     end
 
     private
+
+    # def rental_id
+    #     @car_rental = CarRental.find(params[:car_rental_id])
+    # end
 
 
     def review_params

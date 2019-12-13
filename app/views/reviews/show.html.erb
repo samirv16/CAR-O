@@ -1,5 +1,5 @@
 <h2>Comment:<br> <%= @review.comment %></h2> <br> 
 <h2>Rating: <%= @review.rating %></h2>
 
-<%= link_to "Delete", car_rental_path(@review.car_rental), method: "delete" %>
+<%= link_to "Delete", car_rental_review_path(@review.car_rental, @review), method: :delete %>
 

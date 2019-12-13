@@ -5,7 +5,7 @@
     <h2>Reviews</h2>
     <ul>
     <%@rental.reviews.each do |review| %>
-    <li><p><%= review.comment %><br> Rating:  <%= review.rating %></p></li>
+    <li><p><%= link_to review.comment, review_path(review) %><br> Rating:  <%= review.rating %></p></li>
     <%end%>
     </ul>
 

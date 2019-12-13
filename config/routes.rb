@@ -4,9 +4,7 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
-  resources :reviews
-
-  resources :owners
+  resources :reviews, except: :index
 
   devise_for :users, controllers: { omniauth_callbacks: 'callbacks' }
 
